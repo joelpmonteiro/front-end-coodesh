@@ -24,6 +24,19 @@ Provavelmente poderá mudar o numero da porta se tiver algum projeto rodando.
 npm install
 ```
 
+### Compilar projeto com docker
+
+- certifique que tenha o [docker](https://www.docker.com/get-started) instalado, e seus deverivados como docker compose e etc.
+
+- para criar uma imagem do projeto rode o comando `docker build -t front-end-coodesh .` 
+- E vai iniciar a etapa de criação da imagem que terá o nome *front-end-coodesh*
+- e para iniciar a imagem em um container rode o seguinte comando caso tenha o docker compose instalado.
+```
+docker-compose up -d
+```
+- Esse comando irá usar a imagem que você acabou de buildar e ligará um containers nessa imagem.
+- e com isso usar o nginx para prover o uso de um serviço web como apache e etc.
+- Ao final do processo irá te entregar com a mesma porta #8080 no final, e caso deseja trocar é só modificar no arquivo dockerfile, docker-compose.yml.
 
 ### Compiles and hot-reloads for development
 ```

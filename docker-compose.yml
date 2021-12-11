@@ -1,0 +1,7 @@
+version: "3.7"
+services:
+
+  front-end-coodesh:
+    image: front-end-coodesh
+    ports:
+      - "8080:80"
