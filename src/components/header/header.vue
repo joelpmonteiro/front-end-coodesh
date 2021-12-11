@@ -42,7 +42,7 @@
           @change.prevent="searchSelect"
           v-model="select"
         >
-          <option value="-1" selected disabled>Sort</option>
+          <option value="0" selected>Sort</option>
           <option value="1">Mais antigas</option>
           <option value="2">Mais novos</option>
         </select>
@@ -85,12 +85,14 @@ export default {
           const datB = new Date(b.publishedAt);
           return datA.getUTCHours() - datB.getUTCHours();
         });
-      } else {
+      } else if (parseInt(this.select) == 1) {
         this.getAllArticles.sort((a, b) => {
           const datA = new Date(a.publishedAt);
           const datB = new Date(b.publishedAt);
           return datB.getUTCHours() - datA.getUTCHours();
         });
+      } else {
+        this.$router.go(0);
       }
     },
   },

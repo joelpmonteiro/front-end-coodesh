@@ -118,7 +118,7 @@ export default {
   async mounted() {
     try {
       const all = await axios.getAllArticle();
-      console.log(all);
+      // console.log(all);
       if (all.status === 200) {
         this.articles = all.data.allArticle.docs;
         //const dat = new Date(this.articles[0].publishedAt);

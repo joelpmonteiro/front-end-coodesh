@@ -18,7 +18,7 @@ const store = new Vuex.Store({
     },
     mutGetAllArticlesPush(state, articles) {
       state.article.push(...articles)
-      console.log(state.article)
+      // console.log(state.article)
     },
   },
   getters: {
